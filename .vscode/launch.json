@@ -6,14 +6,19 @@
             "request": "launch",
             "type": "al",
             "environmentType": "Sandbox",
-            "environmentName": "Jacoub_Testing",
+            // "environmentName": "EswarTestEnv20240129",
+            "environmentName": "AJGT_Prod_020226",
+            // "environmentName": "Jacoub_Testing",
+            // "environmentName": "Akhil_Sandbox-251119072355",
+            // "environmentName": "AJGT_Sandbox",
             "startupObjectId": 22,
             "startupObjectType": "Page",
             "breakOnError": "All",
             "launchBrowser": true,
             "enableLongRunningSqlStatements": true,
             "enableSqlInformationDebugger": true,
-            "tenant": "ce522da1-e39a-4b8d-913f-e8252abd1bc5",
+            "tenant": "1487505a-1314-494f-a91b-55754a9f3d2e",
+            // "tenant": "ce522da1-e39a-4b8d-913f-e8252abd1bc5",
             "schemaUpdateMode": "ForceSync"
         }
     ]

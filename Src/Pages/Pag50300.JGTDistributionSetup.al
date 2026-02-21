@@ -16,13 +16,13 @@ page 50300 "JGT Distribution Setup"
                 Caption = 'General';
                 group(From)
                 {
-                    field("Previous Month"; Rec."Previous Month")
-                    {
-                        ToolTip = 'Specifies the value of the Previous Month field.', Comment = '%';
-                    }
                     field("Previous Year"; Rec."Previous Year")
                     {
                         ToolTip = 'Specifies the value of the Previous Year field.', Comment = '%';
+                    }
+                    field("Previous Month"; Rec."Previous Month")
+                    {
+                        ToolTip = 'Specifies the value of the Previous Month field.', Comment = '%';
                     }
                 }
                 group(To)
@@ -44,6 +44,46 @@ page 50300 "JGT Distribution Setup"
             }
         }
     }
+    actions
+    {
+        area(Processing)
+        {
+            // action("Copy From Previous Data")
+            // {
+            //     ApplicationArea = All;
+            //     Promoted = true;
+            //     PromotedCategory = Process;
+            //     Image = CopyBudget;
+            //     trigger OnAction()
+            //     begin
+            //         JGTDistributionCodeunit.CopyFromPreviousDetails(Rec.Year, Rec.Month, Rec."Previous Year", rec."Previous Month");
+            //     end;
+            // }
+            action("Copy Previous Month Data")
+            {
+                ApplicationArea = All;
+                Caption = 'Copy Previous Month Data';
+                Image = Copy;
+                ToolTip = 'Copy distribution data from previous month';
+
+                trigger OnAction()
+                var
+                begin
+                    // Call the copy procedure
+                    JGTDistributionCodeunit.CopyFromPreviousMonth(Rec.Year, Rec.Month, Rec."Previous Year", Rec."Previous Month");
+                end;
+            }
+        }
+    }
+    trigger OnQueryClosePage(CloseAction: Action): Boolean
+    begin
+        Rec.Year := '';
+        Rec.Month := '';
+        Rec."Previous Year" := '';
+        Rec."Previous Month" := '';
+        Rec.Modify();
+    end;
+
     trigger OnOpenPage()
     begin
         Rec.Reset();
@@ -52,4 +92,7 @@ page 50300 "JGT Distribution Setup"
             Rec.Insert();
         end;
     end;
+
+    var
+        JGTDistributionCodeunit: Codeunit "JGT Distribution Codeunit";
 }

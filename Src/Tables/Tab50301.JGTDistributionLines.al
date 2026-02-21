@@ -15,6 +15,10 @@ table 50301 "JGT Distribution Lines"
             Caption = 'Month';
             TableRelation = "Reference Data".Code where(Type = const(Month));
         }
+        field(8; "Line No."; Integer)
+        {
+            Caption = 'Line No.';
+        }
         field(3; "Shortcut Dimension 1 Code"; Code[20])
         {
             CaptionClass = '1,2,1';
@@ -53,12 +57,29 @@ table 50301 "JGT Distribution Lines"
             Caption = 'Square Feets';
             // Editable = false;
         }
+        field(9; "Company Name"; Text[100])
+        {
+            Caption = 'Company Name';
+            DataClassification = ToBeClassified;
+        }
     }
     keys
     {
-        key(PK; Year, Month, "Shortcut Dimension 1 Code")
+        key(PK; Year, Month, "Line No.", "Shortcut Dimension 1 Code")
         {
             Clustered = true;
+        }
+        key(PK1; "Shortcut Dimension 2 Code")
+        {
+
+        }
+        key(PK2; "Shortcut Dimension 3 Code")
+        {
+
+        }
+        key(PK3; "Shortcut Dimension 4 Code")
+        {
+
         }
     }
     var

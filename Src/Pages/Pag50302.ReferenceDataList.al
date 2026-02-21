@@ -1,7 +1,7 @@
 page 50302 "Reference Data List"
 {
     ApplicationArea = All;
-    Caption = 'Reference Data List';
+    Caption = 'JGT Reference Data List';
     PageType = List;
     SourceTable = "Reference Data";
     UsageCategory = None;

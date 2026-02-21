@@ -4,6 +4,7 @@ page 50301 "JGT Distribution Lines"
     Caption = 'JGT Distribution Lines';
     PageType = ListPart;
     SourceTable = "JGT Distribution Lines";
+    MultipleNewLines = true;
 
     layout
     {
@@ -40,7 +41,35 @@ page 50301 "JGT Distribution Lines"
                 {
                     ToolTip = 'Specifies the value of the Square Feets field.', Comment = '%';
                 }
+                field("Line No."; Rec."Line No.")
+                {
+                    ToolTip = 'Specifies the value of the Line No. field.', Comment = '%';
+                }
+                field("Company Name"; Rec."Company Name")
+                {
+                    ToolTip = 'Specifies the value of the Company Name field.', Comment = '%';
+                }
             }
         }
     }
+    actions
+    {
+        area(Processing)
+        {
+            action("Upload from Excel")
+            {
+                ApplicationArea = All;
+                Caption = 'Upload from Excel';
+                Image = ImportExcel;
+                ToolTip = 'Import distribution data from Excel file';
+
+                trigger OnAction()
+                begin
+                    JGTDistributionCodeunit.UploadFromExcelInDistributionSetup(Rec.Year, Rec.Month);
+                end;
+            }
+        }
+    }
+    var
+        JGTDistributionCodeunit: Codeunit "JGT Distribution Codeunit";
 }

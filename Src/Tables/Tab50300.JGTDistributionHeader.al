@@ -27,7 +27,7 @@ table 50300 "JGT Distribution Header"
         field(5; "Previous Month"; Code[20])
         {
             Caption = 'Previous Month';
-            TableRelation = "Reference Data".Code where(Type = const(Year));
+            TableRelation = "Reference Data".Code where(Type = const(Month));
         }
     }
     keys
