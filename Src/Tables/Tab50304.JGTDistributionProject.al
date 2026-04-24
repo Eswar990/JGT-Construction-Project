@@ -34,6 +34,7 @@ table 50304 "JGT Distribution Project"
         {
             Caption = 'G/L Account No.';
             Editable = false;
+            TableRelation = "G/L Account"."No.";
         }
         field(9; Year; Code[20])
         {
@@ -94,6 +95,7 @@ table 50304 "JGT Distribution Project"
         {
             Caption = 'Company Name';
             Editable = false;
+            TableRelation = Company."Display Name";
         }
         field(19; "Posting Date"; Date)
         {

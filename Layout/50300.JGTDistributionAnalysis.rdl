@@ -9,7 +9,7 @@
       <am:Name>MSRB</am:Name>
       <am:Version>15.0.20283.0</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2026-02-06T11:48:44.0798489Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2026-04-24T07:31:10.3132778Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -187,14 +187,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="TempDistRuleEmpNo">
+                        <Textbox Name="TempDistBranchCode">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!TempDistRuleEmpNo.Value</Value>
+                                  <Value>=Fields!TempDistBranchCode.Value</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -203,7 +203,7 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>TempDistRuleEmpNo</rd:DefaultName>
+                          <rd:DefaultName>TempDistBranchCode</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -219,14 +219,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="ShortcutDimension4Code">
+                        <Textbox Name="TempDistProjectCode">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!TempDistRuleEmpProject.Value</Value>
+                                  <Value>=Fields!TempDistProjectCode.Value</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -235,7 +235,7 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>ShortcutDimension4Code</rd:DefaultName>
+                          <rd:DefaultName>TempDistProjectCode</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -251,14 +251,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="TempDistRuleEmpBranch">
+                        <Textbox Name="TempDistPhase">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!TempDistRuleEmpBranch.Value</Value>
+                                  <Value>=Fields!TempDistPhase.Value</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -267,7 +267,7 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>TempDistRuleEmpBranch</rd:DefaultName>
+                          <rd:DefaultName>TempDistPhase</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -283,14 +283,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="TempDistRuleEmpProject">
+                        <Textbox Name="TempDistUnitsCode">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!ShortcutDimension4Code.Value</Value>
+                                  <Value>=Fields!TempDistUnitsCode.Value</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -299,7 +299,7 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>TempDistRuleEmpProject</rd:DefaultName>
+                          <rd:DefaultName>TempDistUnitsCode</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -1246,7 +1246,9 @@
                       </Style>
                     </TextRun>
                   </TextRuns>
-                  <Style />
+                  <Style>
+                    <TextAlign>Left</TextAlign>
+                  </Style>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
@@ -1278,14 +1280,16 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value> Phase </Value>
+                      <Value>Phase</Value>
                       <Style>
                         <FontSize>8pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
                   </TextRuns>
-                  <Style />
+                  <Style>
+                    <TextAlign>Left</TextAlign>
+                  </Style>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox10</rd:DefaultName>
@@ -1628,17 +1632,17 @@ End Function
         <Field Name="TempDistRuleDoc">
           <DataField>TempDistRuleDoc</DataField>
         </Field>
-        <Field Name="TempDistRuleEmpNo">
-          <DataField>TempDistRuleEmpNo</DataField>
+        <Field Name="TempDistBranchCode">
+          <DataField>TempDistBranchCode</DataField>
         </Field>
         <Field Name="EmpName">
           <DataField>EmpName</DataField>
         </Field>
-        <Field Name="TempDistRuleEmpBranch">
-          <DataField>TempDistRuleEmpBranch</DataField>
+        <Field Name="TempDistProjectCode">
+          <DataField>TempDistProjectCode</DataField>
         </Field>
-        <Field Name="TempDistRuleEmpProject">
-          <DataField>TempDistRuleEmpProject</DataField>
+        <Field Name="TempDistPhase">
+          <DataField>TempDistPhase</DataField>
         </Field>
         <Field Name="TempDistRuleDebit">
           <DataField>TempDistRuleDebit</DataField>
@@ -1655,8 +1659,8 @@ End Function
         <Field Name="TempDistRuleEntryNo">
           <DataField>TempDistRuleEntryNo</DataField>
         </Field>
-        <Field Name="ShortcutDimension4Code">
-          <DataField>ShortcutDimension4Code</DataField>
+        <Field Name="TempDistUnitsCode">
+          <DataField>TempDistUnitsCode</DataField>
         </Field>
         <Field Name="SquareFeets">
           <DataField>SquareFeets</DataField>

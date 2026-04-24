@@ -3,7 +3,7 @@ page 50305 "JGT Distribution Project"
     ApplicationArea = All;
     UsageCategory = Administration;
     Caption = 'JGTDistribution Project';
-    PageType = ListPart;
+    PageType = Listpart;
     SourceTable = "JGT Distribution Project";
     SourceTableView = sorting("Entry No.");
     DelayedInsert = true;

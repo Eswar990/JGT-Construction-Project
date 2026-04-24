@@ -72,7 +72,7 @@ report 50300 "JGT Distribution Analysis"
             {
 
             }
-            column(TempDistRuleEmpNo; TempJGTDistRule."Shortcut Dimension 1 Code")
+            column(TempDistBranchCode; TempJGTDistRule."Shortcut Dimension 1 Code")
             {
 
             }
@@ -80,11 +80,11 @@ report 50300 "JGT Distribution Analysis"
             {
 
             }
-            column(TempDistRuleEmpBranch; TempJGTDistRule."Shortcut Dimension 2 Code")
+            column(TempDistProjectCode; TempJGTDistRule."Shortcut Dimension 2 Code")
             {
 
             }
-            column(TempDistRuleEmpProject; TempJGTDistRule."Shortcut Dimension 3 Code")
+            column(TempDistPhase; TempJGTDistRule."Shortcut Dimension 3 Code")
             {
 
             }
@@ -100,7 +100,7 @@ report 50300 "JGT Distribution Analysis"
             {
 
             }
-            column(ShortcutDimension4Code; TempJGTDistRule."Shortcut Dimension 4 Code")
+            column(TempDistUnitsCode; TempJGTDistRule."Shortcut Dimension 4 Code")
             {
 
             }
